@@ -1,1 +1,1 @@
-include ':app', ':sdatelib'
+include ':app', ':sdatelib', ':ssetting'

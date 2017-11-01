@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Publsh.iml" filepath="$PROJECT_DIR$/Publsh.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/sdatelib/sdatelib.iml" filepath="$PROJECT_DIR$/sdatelib/sdatelib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssetting/ssetting.iml" filepath="$PROJECT_DIR$/ssetting/ssetting.iml" />
     </modules>
   </component>
 </project>
