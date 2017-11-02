@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/sbottomnavigationlib" />
             <option value="$PROJECT_DIR$/sdatelib" />
             <option value="$PROJECT_DIR$/sgps" />
             <option value="$PROJECT_DIR$/ssetting" />

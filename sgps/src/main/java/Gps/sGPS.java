@@ -77,8 +77,6 @@ public class sGPS implements GoogleApiClient.ConnectionCallbacks, GoogleApiClien
             return;
         }
 
-
-
         LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, locationListener);
     }
 
@@ -152,13 +150,13 @@ public class sGPS implements GoogleApiClient.ConnectionCallbacks, GoogleApiClien
         });
     }
 
-    public static double jarak (Location lokasi1 , Location lokasi2, int radius){
+    public static double jarak (Location lokasi1 , Location lokasi2){
         double jarak = lokasi1.distanceTo(lokasi2);
         Log.d("DISTANCE",""+jarak);
         return jarak;
     }
 
-    public static double jarak (double lat1 , double long1, double lat2, double long2, int radius){
+    public static double jarak (double lat1 , double long1, double lat2, double long2){
 
         Location lokasi1 = new Location("");
         lokasi1.setLatitude(lat1); lokasi1.setLongitude(long1);
