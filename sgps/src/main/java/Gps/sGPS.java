@@ -25,11 +25,6 @@ import com.google.android.gms.location.LocationSettingsStatusCodes;
 
 import static android.content.ContentValues.TAG;
 
-/**
- * Created by mac1 on 8/28/17.
- */
-
-
             /*
             compile 'com.google.android.gms:play-services-location:11.0.4'
             compile 'com.google.android.gms:play-services-places:11.0.4'
