@@ -40,8 +40,6 @@ public class sBottomNavFrag extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_s_bottom_nav, container, false);
 
-        Log.d("Hehe","Hehe");
-
         btm = view.findViewById(R.id.btmFrag);
         menu = btm.getMenu();
 
@@ -135,7 +133,7 @@ public class sBottomNavFrag extends Fragment {
             }
         });
 
-        btm.setSelectedItemId(R.id.item1);
+        btm.setSelectedItemId(R.id.item3);
     }
 
 }
