@@ -1,9 +1,11 @@
 package net.schooldroid.sbottomnavigationlib;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -26,10 +28,11 @@ public class sBottomNavFrag extends Fragment {
     BottomNavigationViewEx btm;
     Menu menu;
 
-    boolean setTitle, setIcon, setFrag;
+    boolean setTitle, setIcon, setFrag,setBackground;
     String title1,title2,title3,title4,title5;
     @DrawableRes int icon1,icon2,icon3,icon4,icon5;
     Fragment fragment1,fragment2,fragment3,fragment4,fragment5;
+    @ColorInt int background_color;
 
     public sBottomNavFrag() {
 
@@ -41,7 +44,18 @@ public class sBottomNavFrag extends Fragment {
         View view = inflater.inflate(R.layout.fragment_s_bottom_nav, container, false);
 
         btm = view.findViewById(R.id.btmFrag);
+        btm.setTextSize(9);
+        btm.enableItemShiftingMode(false);
+        btm.enableShiftingMode(false);
+
         menu = btm.getMenu();
+
+        applyAllSet();
+
+        return view;
+    }
+
+    private void applyAllSet(){
 
         if(setTitle) {
             applyTitle();
@@ -52,8 +66,10 @@ public class sBottomNavFrag extends Fragment {
         if(setFrag){
             applyFragment();
         }
+        if(setBackground){
+            applyBackgroundColor();
+        }
 
-        return view;
     }
 
     public void setIcon (@DrawableRes int icon1, @DrawableRes int icon2 , @DrawableRes int icon3 , @DrawableRes int icon4 , @DrawableRes int icon5){
@@ -82,6 +98,11 @@ public class sBottomNavFrag extends Fragment {
         this.fragment4 = fragment4;
         this.fragment5 = fragment5;
         Log.d("SET","FRAGMENT");
+    }
+
+    public void setBackground(@ColorInt int color){
+        setBackground = true;
+        background_color = color;
     }
 
     private void applyIcon (){
@@ -134,6 +155,10 @@ public class sBottomNavFrag extends Fragment {
         });
 
         btm.setSelectedItemId(R.id.item3);
+    }
+
+    private void applyBackgroundColor(){
+        btm.setBackgroundColor(background_color);
     }
 
 }

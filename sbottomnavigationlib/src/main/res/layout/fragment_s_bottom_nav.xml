@@ -12,7 +12,7 @@
 
         <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
             android:elevation="5dp"
-            android:background="#dddddd"
+            android:background="@color/background_bottom"
             android:id="@+id/btmFrag"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
